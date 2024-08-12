@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_037umqy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.13.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0">
+  <bpmn:process id="Process_03ohrti" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1bcoju8</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_1d6a4tn" name="Request For Payment SUBMITTED by EMPLOYEE">
+      <bpmn:incoming>Flow_1bcoju8</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gvf5tw</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_0s8jvi0" name="Request For Payment APPROVED by ADMINISTRATION">
+      <bpmn:incoming>Flow_1gvf5tw</bpmn:incoming>
+      <bpmn:outgoing>Flow_0cljaoh</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1g8tx79" name="Request For Payment REJECTED by EMPLOYEE">
+      <bpmn:incoming>Flow_0cljaoh</bpmn:incoming>
+      <bpmn:outgoing>Flow_0rtnid3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_1pc7ybo">
+      <bpmn:incoming>Flow_0rtnid3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1bcoju8" sourceRef="StartEvent_1" targetRef="Activity_1d6a4tn" />
+    <bpmn:sequenceFlow id="Flow_1gvf5tw" sourceRef="Activity_1d6a4tn" targetRef="Activity_0s8jvi0" />
+    <bpmn:sequenceFlow id="Flow_0rtnid3" sourceRef="Activity_1g8tx79" targetRef="Event_1pc7ybo" />
+    <bpmn:sequenceFlow id="Flow_0cljaoh" sourceRef="Activity_0s8jvi0" targetRef="Activity_1g8tx79" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_03ohrti">
+      <bpmndi:BPMNShape id="BPMNShape_1mj5650" bpmnElement="StartEvent_1">
+        <dc:Bounds x="122" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1d6a4tn_di" bpmnElement="Activity_1d6a4tn">
+        <dc:Bounds x="233" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0s8jvi0_di" bpmnElement="Activity_0s8jvi0">
+        <dc:Bounds x="393" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1g8tx79_di" bpmnElement="Activity_1g8tx79">
+        <dc:Bounds x="610" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1pc7ybo_di" bpmnElement="Event_1pc7ybo">
+        <dc:Bounds x="823" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1bcoju8_di" bpmnElement="Flow_1bcoju8">
+        <di:waypoint x="158" y="120" />
+        <di:waypoint x="233" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gvf5tw_di" bpmnElement="Flow_1gvf5tw">
+        <di:waypoint x="333" y="120" />
+        <di:waypoint x="393" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rtnid3_di" bpmnElement="Flow_0rtnid3">
+        <di:waypoint x="710" y="120" />
+        <di:waypoint x="823" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0cljaoh_di" bpmnElement="Flow_0cljaoh">
+        <di:waypoint x="493" y="120" />
+        <di:waypoint x="610" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_18uaut7" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.13.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0">
+  <bpmn:process id="Process_1m1jqa7" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_0ncoeu7</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_09we9m3" name="Declaration SUBMITTED by EMPLOYEE">
+      <bpmn:incoming>Flow_0ncoeu7</bpmn:incoming>
+      <bpmn:outgoing>Flow_0ly8sjf</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1y4qjwu" name="Declaration REJECTED by ADMINISTRATION">
+      <bpmn:incoming>Flow_0ly8sjf</bpmn:incoming>
+      <bpmn:outgoing>Flow_0jbq151</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1mmrss3" name="Declaration REJECTED by EMPLOYEE">
+      <bpmn:incoming>Flow_0jbq151</bpmn:incoming>
+      <bpmn:outgoing>Flow_0tn48cy</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_0ncoeu7" sourceRef="StartEvent_1" targetRef="Activity_09we9m3" />
+    <bpmn:sequenceFlow id="Flow_0ly8sjf" sourceRef="Activity_09we9m3" targetRef="Activity_1y4qjwu" />
+    <bpmn:sequenceFlow id="Flow_0jbq151" sourceRef="Activity_1y4qjwu" targetRef="Activity_1mmrss3" />
+    <bpmn:endEvent id="Event_030n48v">
+      <bpmn:incoming>Flow_0tn48cy</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_0tn48cy" sourceRef="Activity_1mmrss3" targetRef="Event_030n48v" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_1m1jqa7">
+      <bpmndi:BPMNShape id="_BPMNShape_StartEvent_2" bpmnElement="StartEvent_1">
+        <dc:Bounds x="179" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_09we9m3_di" bpmnElement="Activity_09we9m3">
+        <dc:Bounds x="280" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1y4qjwu_di" bpmnElement="Activity_1y4qjwu">
+        <dc:Bounds x="440" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1mmrss3_di" bpmnElement="Activity_1mmrss3">
+        <dc:Bounds x="620" y="77" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_030n48v_di" bpmnElement="Event_030n48v">
+        <dc:Bounds x="792" y="99" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_0ncoeu7_di" bpmnElement="Flow_0ncoeu7">
+        <di:waypoint x="215" y="117" />
+        <di:waypoint x="280" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ly8sjf_di" bpmnElement="Flow_0ly8sjf">
+        <di:waypoint x="380" y="117" />
+        <di:waypoint x="440" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0jbq151_di" bpmnElement="Flow_0jbq151">
+        <di:waypoint x="540" y="117" />
+        <di:waypoint x="620" y="117" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0tn48cy_di" bpmnElement="Flow_0tn48cy">
+        <di:waypoint x="720" y="117" />
+        <di:waypoint x="792" y="117" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

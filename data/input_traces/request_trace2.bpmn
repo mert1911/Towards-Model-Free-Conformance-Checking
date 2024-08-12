@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:modeler="http://camunda.org/schema/modeler/1.0" id="Definitions_037umqy" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="5.13.0" modeler:executionPlatform="Camunda Cloud" modeler:executionPlatformVersion="8.2.0">
+  <bpmn:process id="Process_03ohrti" isExecutable="true">
+    <bpmn:startEvent id="StartEvent_1">
+      <bpmn:outgoing>Flow_1bcoju8</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:task id="Activity_1d6a4tn" name="Request For Payment SUBMITTED by EMPLOYEE">
+      <bpmn:incoming>Flow_1bcoju8</bpmn:incoming>
+      <bpmn:outgoing>Flow_1gvf5tw</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_0s8jvi0" name="Request For Payment APPROVED by ADMINISTRATION">
+      <bpmn:incoming>Flow_1gvf5tw</bpmn:incoming>
+      <bpmn:outgoing>Flow_01t941f</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1625ygd" name="Request Payment">
+      <bpmn:incoming>Flow_02qjeht</bpmn:incoming>
+      <bpmn:outgoing>Flow_1m5pgqg</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_1g8tx79" name="Payment Handled">
+      <bpmn:incoming>Flow_1m5pgqg</bpmn:incoming>
+      <bpmn:outgoing>Flow_0rtnid3</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:endEvent id="Event_1pc7ybo">
+      <bpmn:incoming>Flow_0rtnid3</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:sequenceFlow id="Flow_1bcoju8" sourceRef="StartEvent_1" targetRef="Activity_1d6a4tn" />
+    <bpmn:sequenceFlow id="Flow_1gvf5tw" sourceRef="Activity_1d6a4tn" targetRef="Activity_0s8jvi0" />
+    <bpmn:sequenceFlow id="Flow_1m5pgqg" sourceRef="Activity_1625ygd" targetRef="Activity_1g8tx79" />
+    <bpmn:sequenceFlow id="Flow_0rtnid3" sourceRef="Activity_1g8tx79" targetRef="Event_1pc7ybo" />
+    <bpmn:task id="Activity_0ab9w18" name="Request For Payment APPROVED by BUDGET OWNER">
+      <bpmn:incoming>Flow_01t941f</bpmn:incoming>
+      <bpmn:outgoing>Flow_1f8n7yi</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:task id="Activity_05ktvi4" name="Request For Payment FINAL_APPROVED by SUPERVISOR">
+      <bpmn:incoming>Flow_1f8n7yi</bpmn:incoming>
+      <bpmn:outgoing>Flow_02qjeht</bpmn:outgoing>
+    </bpmn:task>
+    <bpmn:sequenceFlow id="Flow_01t941f" sourceRef="Activity_0s8jvi0" targetRef="Activity_0ab9w18" />
+    <bpmn:sequenceFlow id="Flow_1f8n7yi" sourceRef="Activity_0ab9w18" targetRef="Activity_05ktvi4" />
+    <bpmn:sequenceFlow id="Flow_02qjeht" sourceRef="Activity_05ktvi4" targetRef="Activity_1625ygd" />
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Process_03ohrti">
+      <bpmndi:BPMNShape id="BPMNShape_1mj5650" bpmnElement="StartEvent_1">
+        <dc:Bounds x="122" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1d6a4tn_di" bpmnElement="Activity_1d6a4tn">
+        <dc:Bounds x="233" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0s8jvi0_di" bpmnElement="Activity_0s8jvi0">
+        <dc:Bounds x="393" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1625ygd_di" bpmnElement="Activity_1625ygd">
+        <dc:Bounds x="753" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_1g8tx79_di" bpmnElement="Activity_1g8tx79">
+        <dc:Bounds x="943" y="80" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1pc7ybo_di" bpmnElement="Event_1pc7ybo">
+        <dc:Bounds x="1085" y="102" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_05ktvi4_di" bpmnElement="Activity_05ktvi4">
+        <dc:Bounds x="650" y="210" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_0ab9w18_di" bpmnElement="Activity_0ab9w18">
+        <dc:Bounds x="480" y="210" width="100" height="80" />
+        <bpmndi:BPMNLabel />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1bcoju8_di" bpmnElement="Flow_1bcoju8">
+        <di:waypoint x="158" y="120" />
+        <di:waypoint x="233" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1gvf5tw_di" bpmnElement="Flow_1gvf5tw">
+        <di:waypoint x="333" y="120" />
+        <di:waypoint x="393" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1m5pgqg_di" bpmnElement="Flow_1m5pgqg">
+        <di:waypoint x="853" y="120" />
+        <di:waypoint x="943" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0rtnid3_di" bpmnElement="Flow_0rtnid3">
+        <di:waypoint x="1043" y="120" />
+        <di:waypoint x="1085" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_01t941f_di" bpmnElement="Flow_01t941f">
+        <di:waypoint x="443" y="160" />
+        <di:waypoint x="443" y="185" />
+        <di:waypoint x="490" y="185" />
+        <di:waypoint x="490" y="210" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_1f8n7yi_di" bpmnElement="Flow_1f8n7yi">
+        <di:waypoint x="580" y="250" />
+        <di:waypoint x="650" y="250" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_02qjeht_di" bpmnElement="Flow_02qjeht">
+        <di:waypoint x="700" y="210" />
+        <di:waypoint x="700" y="185" />
+        <di:waypoint x="803" y="185" />
+        <di:waypoint x="803" y="160" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>
