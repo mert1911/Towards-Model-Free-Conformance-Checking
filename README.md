@@ -26,31 +26,6 @@ An intuitive approach to model-free conformance checking would be first to disco
 </div>
 
 
-
-{'alignment ground truth': [('A_SUBMITTED', 'A_SUBMITTED'),
-  ('A_PARTLYSUBMITTED', 'A_PARTLYSUBMITTED'),
-  ('A_PREACCEPTED', 'A_PREACCEPTED'),
-  ('A_ACCEPTED', 'A_ACCEPTED'),
-  ('A_FINALIZED', 'A_FINALIZED'),
-  ('>>', 'A_APPROVED'),
-  ('A_REGISTERED', 'A_REGISTERED'),
-  ('A_APPROVED', '>>'),
-  ('A_ACTIVATED', 'A_ACTIVATED'),
-  ('>>', None),
-  ('>>', None)],
- 'cost': 20001.4,
- 'visited_states': 11,
- 'queued_states': 32,
- 'traversed_arcs': 32,
- 'lp_solved': 20,
- 'fitness': 0.8888888888888888,
- 'bwc': 189991.0}
-
-
-
-
-
-
 ### References
 [1] Lahann, J., Pfeiffer, P., Fettke, P.: Lstm-based anomaly detection of process instances: benchmark and tweaks. In: ICPM. pp. 229–241. Springer (2022)
 
