@@ -13,10 +13,10 @@ _**notebooks:**_
 
 ### Anomaly Detection Baseline (DAPNN, BINet)
 Although the intended purpose of Anomaly Detection is not to determine the trace conformance, those traces classified anomalous may be also deviating. Therefore, we compare our approach to **BINet**[2] in the versions v1 and v2. We also use the anomaly detection approach **DAPPN**[1] in version FIX-98, which we refer to as DAPPN1. This version refines BINet in several ways. We further use a modified version of DAPPN1, called DAPPN2, which focuses solely on detecting anomalies at the trace level, similar to BINetv2 and our approach. We implemented these versions based on the authors' conceptual descriptions provided in their papers. However, our implementations may differ slightly, as they have been adapted to be applicable for our specific use case of conformance checking.
-- BINet_v1: ...
-- BINet_v2: ...
-- DAPNN_1: ...
-- DAPNN_2: ...
+- **BINet_v1:** Original approach by Nolle et al. [2]
+- **BINet_v1-NextActivity:** Modified version of BINet_v1, predicting only the next activity based on previous activities
+- **DAPNN_FIX-98:** Original approach by Lahann et al. [1]
+- **DAPNN_FIX-98-NextActivity:** Modified version of DAPNN_FIX-98, predicting only the next activity based on previous activities
 
 
 
