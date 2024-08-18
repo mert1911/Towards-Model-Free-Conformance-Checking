@@ -16,12 +16,12 @@ An intuitive approach to model-free conformance checking would be first to disco
 
 <div style="display: flex; justify-content: center; align-items: flex-start;">
   <div style="text-align: center; margin: 0 20px;">
-    <img src="images/12A_discovered_model.png" alt="Discovered Model" style="width: 800px; height: auto;"/>
-    <div>Fig. 1: 12A Discovered Model</div>
+    <img src="images/12A_discovered_model.png" alt="Discovered Model" style="width: 1000px; height: auto;"/>
+    <div>Fig. 1: Discovered Model 12A</div>
   </div>
   <div style="text-align: center; margin: 0 20px;">
-    <img src="images/12A_ground_truth_model.png" alt="Ground Truth Model" style="width: 800px; height: auto;"/>
-    <div>Fig. 2: 12A Ground Truth Model</div>
+    <img src="images/12A_ground_truth_model.png" alt="Ground Truth Model" style="width: 1000px; height: auto;"/>
+    <div>Fig. 2: Ground Truth Model 12A</div>
   </div>
 </div>
 
