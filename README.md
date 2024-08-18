@@ -12,16 +12,16 @@ notebooks:
 
 
 ### Process Discovery Baseline (H+A)
-An intuitive approach to model-free conformance checking would be first to discover a process model and then perform traditional trace alignments. We use the heuristics miner with default noise parameters to discover a process model from the event log and use the PM4Py trace alignment implementation to perform model-free conformance checking.
+An intuitive approach to model-free conformance checking would be first to discover a process model and then perform traditional trace alignments. We use the heuristics miner with default noise parameters to discover a process model from the event log and use the PM4Py trace alignment implementation to perform model-free conformance checking. We visualized the ground truth and the discovered process model for log 12A:
 
 <div style="display: flex; justify-content: center; align-items: flex-start;">
   <div style="text-align: center; margin: 0 20px;">
     <img src="images/12A_discovered_model.png" alt="Discovered Model" style="width: 800px; height: auto;"/>
-    <div>Fig. 1: Discovered Model</div>
+    <div>Fig. 1: 12A Discovered Model</div>
   </div>
   <div style="text-align: center; margin: 0 20px;">
     <img src="images/12A_ground_truth_model.png" alt="Ground Truth Model" style="width: 800px; height: auto;"/>
-    <div>Fig. 2: Ground Truth Model</div>
+    <div>Fig. 2: 12A Ground Truth Model</div>
   </div>
 </div>
 
