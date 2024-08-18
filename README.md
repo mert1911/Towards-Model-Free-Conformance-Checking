@@ -25,6 +25,8 @@ An intuitive approach to model-free conformance checking would be first to disco
   </div>
 </div>
 
+Some discovered process models exhibit poor semantic quality as they fail to adequately capture the intended behavior. This results in the inability to accurately reconstruct inserted and skipped activities, leading to ineffective detection of model deviations.
+
 
 ### References
 [1] Lahann, J., Pfeiffer, P., Fettke, P.: Lstm-based anomaly detection of process instances: benchmark and tweaks. In: ICPM. pp. 229–241. Springer (2022)
