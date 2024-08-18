@@ -37,7 +37,11 @@ An intuitive approach to model-free conformance checking would be first to disco
 ### Our Approach
 In this paper, we introduce a novel approach to model-free conformance checking based on unsupervised machine learning techniques that does not rely on a predefined process model. Instead, it determines conformance solely based on the annotation of three trace variants as conform. The approach classifies all traces in an event log as either conforming or deviating by applying unsupervised clustering to the distances of the traces to these three variants. In addition, it is able to determine the trace fitness as well as individual deviations in the form of inserted and skipped events, meaning that it generates the same diagnostics as alignments. 
 
-
+<div style="display: flex; justify-content: center; align-items: flex-start;">
+  <div style="text-align: center; margin: 0 20px;">
+    <img src="images/approach.png" alt="approach" style="width: 900px; height: auto;"/>
+    <div>Fig. 1: Discovered Model 12A</div>
+</div>
 ### References
 [1] Lahann, J., Pfeiffer, P., Fettke, P.: Lstm-based anomaly detection of process instances: benchmark and tweaks. In: ICPM. pp. 229–241. Springer (2022)
 
