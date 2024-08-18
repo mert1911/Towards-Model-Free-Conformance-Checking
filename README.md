@@ -36,7 +36,8 @@ An intuitive approach to model-free conformance checking would be first to disco
 
 ### Our Approach
 In this paper, we introduce a novel approach to model-free conformance checking based on unsupervised machine learning techniques that does not rely on a predefined process model. Instead, it determines conformance solely based on the annotation of three trace variants as conform. The approach classifies all traces in an event log as either conforming or deviating by applying unsupervised clustering to the distances of the traces to these three variants. In addition, it is able to determine the trace fitness as well as individual deviations in the form of inserted and skipped events, meaning that it generates the same diagnostics as alignments. 
-<img src="images/approach.png" alt="Fig. 1: Discovered Model 12A" width="400"/>
+
+<img src="images/approach.png" alt="Fig. 1: Discovered Model 12A" width="800"/>
 
 
 ### References
