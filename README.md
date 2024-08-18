@@ -8,7 +8,7 @@ _**data:**_
 - contains all the event logs, process models and input traces used
 
 _**notebooks:**_
-- contains all the experimental results for approaches BINet, DAPNN, H+A, OHE, and EMB
+- contains all the experimental results for approaches BINet[2], DAPNN[1], H+A, OHE, and EMB
 
 
 ### Anomaly Detection Baseline (DAPNN, BINet)
