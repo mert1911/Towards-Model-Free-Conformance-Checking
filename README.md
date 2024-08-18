@@ -4,10 +4,10 @@
 This repository is supposed to help to reproduce the work in the paper "Towards Model-Free Conformance Checking: Assessing Trace Conformance Based on Few Annotated Variants". With
 this work, we aim to move towards model-free conformance checking and enable managers to apply conformance checking even if no process model is available. We evaluated various anomaly detection algorithms and used the heuristic miner algorithm as baselines. Additionally, we proposed a novel approach that uses three conforming input traces for conformance checking.
 
-data
+_**data:**_
 - contains all the event logs, process models and input traces used
 
-notebooks:
+_**notebooks:**_
 - contains all the experimental results for approaches BINet, DAPNN, H+A, OHE, and EMB
 
 
