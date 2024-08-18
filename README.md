@@ -17,7 +17,7 @@ An intuitive approach to model-free conformance checking would be first to disco
 <div style="display: flex; justify-content: center; align-items: flex-start;">
   <div style="text-align: center; margin: 0 20px;">
     <img src="images/12A_discovered_model.png" alt="Discovered Model" style="width: 800px; height: auto;"/>
-    <div style="margin-bottom: 20px;">Fig. 1: Discovered Model</div> <!-- Added margin-bottom -->
+    <div>Fig. 1: Discovered Model</div>
   </div>
   <div style="text-align: center; margin: 0 20px;">
     <img src="images/12A_ground_truth_model.png" alt="Ground Truth Model" style="width: 800px; height: auto;"/>
