@@ -15,9 +15,16 @@ notebooks:
 An intuitive approach to model-free conformance checking would be first to discover a process model and then perform traditional trace alignments. We use the heuristics miner with default noise parameters to discover a process model from the event log and use the PM4Py trace alignment implementation to perform model-free conformance checking.
 
 <p align="center">
-  <img src="images/12A_discovered_model.png" alt="Image 1" width="400"/>
-  <img src="images/12A_ground_truth_model.png" width="400"/>
+  <figure>
+    <img src="images/12A_discovered_model.png" alt="Discovered Model" width="400"/>
+    <figcaption>Discovered Model</figcaption>
+  </figure>
+  <figure>
+    <img src="images/12A_ground_truth_model.png" alt="Ground Truth Model" width="400"/>
+    <figcaption>Ground Truth Model</figcaption>
+  </figure>
 </p>
+
 
 
 ### References
