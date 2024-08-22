@@ -50,5 +50,5 @@ python version:	3.9.19
 - pm4py version: 2.7.11.13
 - scikit-learn version: 1.2.2
 - TensorFlow version: 2.13.0
-- numpy version: 1.25.2
+- numpy version: 1.24.3
 - pandas version: 2.2.2
